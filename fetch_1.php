@@ -4,6 +4,7 @@
   $legend_sensor_name = "Temprature";
   $legend_time_name =  "Time";
   $number_of_samples =  "1000";
+  $interval_span =  "30"; //mins
 
 ?>
 
@@ -99,7 +100,7 @@
         hAxis: {
           viewWindow: {
 
-			         min: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m-30); ?>),
+			         min: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m-$interval_span); ?>),
                max: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m); ?>),
 
 
