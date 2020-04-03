@@ -90,7 +90,7 @@
           title: '<?php echo $title; ?>',
           subtitle: 'Time/Date: <?php echo date('hA (M-d-Y )',time()); ?>'
         },
-        width: 900,
+        width: '100%',
         height: 500,
         legend: {position: 'top'},
         enableInteractivity: false,
