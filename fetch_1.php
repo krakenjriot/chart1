@@ -98,15 +98,11 @@
         },
         hAxis: {
           viewWindow: {
-            //min: new Date(2020, 4, 1, 8, ),
-            //max: new Date(2020, 4, 1, 8, 49)
 
-			//min: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".$m.",".($s-60); ?>),
-			min: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m-30); ?>),
-            max: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m); ?>),
+			         min: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m-30); ?>),
+               max: new Date(<?php echo $y.",".$mo.",".$d.",".$h.",".($m); ?>),
 
-			//min: new Date(<?php echo $y.",".$mo.",".$d; ?>,9,0),
-            //max: new Date(<?php echo $y.",".$mo.",".$d; ?>,9,59),
+
           },
           gridlines: {
             count: -1,
