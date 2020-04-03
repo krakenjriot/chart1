@@ -1,6 +1,10 @@
 <?php
+
   $title = "NEW Ambient Temperature Graph (c)";
-  $legend_name = "Temprature";
+  $legend_sensor_name = "Temprature";
+  $legend_time_name =  "Time";
+  $number_of_samples =  "1000";
+
 ?>
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -11,8 +15,8 @@
     function drawChart() {
 
       var data = new google.visualization.DataTable();
-      data.addColumn('datetime', "Time");
-      data.addColumn('number', '<?php echo $legend_name; ?>');
+      data.addColumn('datetime', "<?php echo $legend_time_name; ?>");
+      data.addColumn('number', '<?php echo $legend_sensor_name; ?>');
       //data.addColumn('number', 'Sensor2');
 
 
@@ -33,7 +37,7 @@
 
 
 			 //$query = " SELECT dtime,sensor1,sensor2,hum,temp  FROM tbl_sensors ORDER BY id DESC LIMIT 100 ";
-			 $query = " SELECT *  FROM tbl_sensors ORDER BY id DESC LIMIT 500 ";
+			 $query = " SELECT *  FROM tbl_sensors ORDER BY id DESC LIMIT $number_of_samples ";
 
 			 $statement = $connect->prepare($query);
 			 $statement->execute();
